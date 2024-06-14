@@ -1,0 +1,218 @@
+/* General Reset and Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: var(--background-color, #f8f8ff);
+    color: var(--text-color, #000);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 80px;
+    background-color: #8756a7; /* Purple */
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.sidebar img {
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 15px;
+    width: 100%;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #D1C4E9; /* Light Lavender */
+    color: #bfadca;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    width: 180px;
+    margin-right: 10px;
+}
+
+.header .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.header .nav-links a {
+    text-decoration: none;
+    color: #6A1B9A; /* Purple */
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: var(--nav-link-background, #E1BEE7); /* Light Pink */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header .nav-links a:hover {
+    background-color: #6A1B9A; /* Purple */
+    color: #fff;
+}
+
+.header .toggle-mode {
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--toggle-background, #E1BEE7); /* Light Pink */
+    color: var(--toggle-text, #6A1B9A); /* Purple */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Summary Cards */
+.summary-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.summary-cards .card {
+    background-color: #F3E5F5; /* Lavender */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 23%;
+    border: 2px solid #6A1B9A; /* Purple border */
+    transition: transform 0.3s;
+}
+
+.summary-cards .card:hover {
+    transform: scale(1.05);
+}
+
+/* Seminar Table */
+.seminar-table {
+    background-color: var(--table-background, #F3E5F5); /* Lavender */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.1em;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #D1C4E9; /* Light Lavender */
+}
+
+th {
+    background-color: var(--table-header-background, #E1BEE7); /* Light Pink */
+}
+
+td input.date-picker {
+    background-color: #F3E5F5; /* Lavender */
+    border: 1px solid #6A1B9A; /* Purple */
+    padding: 5px;
+    border-radius: 4px;
+    color: #6A1B9A;
+    text-align: center;
+}
+
+/* Dark Mode */
+.dark-mode {
+    --background-color: #333;
+    --text-color: #fff;
+    --nav-link-background: #6A1B9A; /* Purple */
+    --toggle-background: #6A1B9A; /* Purple */
+    --toggle-text: #fff;
+    --table-background: #6A1B9A; /* Purple */
+    --table-header-background: #5E35B1; /* Darker Purple */
+}
+
+.dark-mode .sidebar a {
+    color: #ddd;
+}
+
+.dark-mode .sidebar a:hover {
+    background-color: #8E24AA; /* Darker Purple */
+    color: #fff;
+}
+
+.dark-mode .header .nav-links a,
+.dark-mode .header .toggle-mode {
+    color: #fff;
+}
+
+.dark-mode .header .nav-links a:hover {
+    background-color: #7B1FA2; /* Darker Purple */
+}
+
+.dark-mode .summary-cards .card {
+    background-color: #7B1FA2; /* Darker Purple */
+    color: #fff;
+    border-color: #fff;
+}
+
+.dark-mode .seminar-table {
+    background-color: #7B1FA2; /* Darker Purple */
+}
+
+.dark-mode th,
+.dark-mode td {
+    border-bottom: 1px solid #ddd;
+}
+
+.dark-mode th {
+    background-color: #5E35B1; /* Darker Purple */
+}
+
+.dark-mode td input.date-picker {
+    background-color: #6A1B9A; /* Purple */
+    color: #fff;
+    border-color: #fff;
+}
+
+
+
+
+
+
